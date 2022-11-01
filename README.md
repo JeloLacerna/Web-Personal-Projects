@@ -15,4 +15,5 @@ This is a portfolio project I've done for my introduction to web development. Bu
 ## JVSPT - JavaScript
 This is a database website for the game Genshin Impact I built as the final project for my Javascript course.
 
-## PHPSL - This is the XAMPP version of the AWTEC project. Same frontend but different backend.
+## PHPSL - PHP
+This is the XAMPP version of the AWTEC project. Same frontend but different backend.
