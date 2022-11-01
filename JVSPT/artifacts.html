@@ -1,0 +1,2283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDP | Artifacts</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8c9da4b746.js" crossorigin="anonymous"></script>
+    <script src="Scripts/modernizr.custom.05819.js" defer></script>
+    <script src="Scripts/filter-scripts.js" defer></script>
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-16x16.png" sizes="16x16">
+</head>
+<body>
+    <main class="main">
+        <aside class="sidebar shaded-bg">
+            <div class="logo-container">
+                <a href="">
+                    <img src="Media/White-logo.png" alt="">
+                </a>
+            </div>
+            <hr>
+            <div class="menu-container">
+                <ul class="navigation">
+                    <div class="title-card">
+                        Genshin Impact Database Project
+                    </div>
+                    <li>
+                        <a href="index.html"><img src="Media/Home.png" alt=""><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="characters.html"><img src="Media/Character.png" alt=""><span>Characters</span></a>
+                    </li>
+                    <li>
+                        <a href="events.html"><img src="Media/Event.png" alt=""><span>Events</span></a>
+                    </li>
+                    <li>
+                        <a href="weapons.html"><img src="Media/Weapon.png" alt=""><span>Weapons</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="artifacts.html"><img src="Media/Artifact.png" alt="" ><span>Artifacts</span></a>
+                    </li>
+                    <li>
+                        <a href="calculator.html"><img src="Media/Calc.png" alt=""><span>Calculator</span></a>
+                    </li>
+                    <li>
+                        <a href="items.html"><img src="Media/Items.png" alt=""><span>Items</span></a>
+                    </li>
+                    <li>
+                        <a href="links.html"><img src="Media/Links.png" alt=""><span>Links</span></a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="content">
+            <div class="page-title-container">
+                <p class="border-b">Artifacts</p>
+            </div>
+            <div class="filter-bar col shaded-bg">
+                <div class="filter-row flex-display">
+                    <div class="filter-cat">
+                        <h3>Search</h3>
+                        <input type="text" name="artifact-search" id="artifact-search" placeholder="Search..." class="search-bar" onkeyup="artiSearch()">
+                    </div>
+                    <div class="filter-cat">
+                        <h3>Max Rarity</h3>
+                        <div class="filter-button-container filter-button-container-arti flex-display" id="rarity-filter">
+                            <div class="filter-button rarity-button" id="5S-filter-button" data-filter-five-a>
+                                <span class="text-rarity" data-filter-five-a>
+                                    5
+                                </span>
+                                <span class="stars" data-filter-five-a>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-five-a></i>
+                                </span>
+                            </div>
+                            <div class="filter-button rarity-button" id="4S-filter-button" data-filter-four-a>
+                                <span class="text-rarity" data-filter-four-a>
+                                    4
+                                </span>
+                                <span class="stars" data-filter-four-a>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-four-a></i>
+                                </span>
+                            </div>
+                            <div class="filter-button rarity-button" id="4S-filter-button" data-filter-three-a>
+                                <span class="text-rarity" data-filter-three-a>
+                                    3
+                                </span>
+                                <span class="stars" data-filter-three-a>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-three-a></i>
+                                </span>
+                            </div>
+                            <div class="filter-cat clear-button-cont">
+                                <button type="button" onclick="clearFiltersArti()">Clear Filters</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="content-main grid-2" id="arti-list">
+
+                <!--Adventurer-->
+                <div class="grid-cells col" data-three>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Adventurer</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10010_4.png" alt="" class="rank-three">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Max HP increased by 1000</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Opening a chest regenerates 30% Max HP over 5s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Midsummer Courtyard</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Chests</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Lucky Dog-->
+                <div class="grid-cells col" data-three>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Lucky Dog</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10011_4.png" alt="" class="rank-three">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Def increaseed 100</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Picking up Mora restores 300 HP</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Domain of Guyun</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Chests</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Travelling Doctor-->
+                <div class="grid-cells col" data-three>
+                    <div class="content-box artifact-card fw">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Travelling Doctor</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10013_4.png" alt="" class="rank-three">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases incoming healing by 20%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Using Elemental Burst restores 20% HP</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Valley of Remembrance</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Chests</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Sojourner-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Resolution of Sojourner</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10001_4.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>ATK +18%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases Charged Attack CRIT Rate by 30%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Midsummer Courtyard</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Tiny Miracle-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Tiny Miracle</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10004_4.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>All Elemental RES increased by 20%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s. Can only occur once every 10s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Valley of Remembrance</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Bersker-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Bersker</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10005_4.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>When HP is below 70%, CRIT Rate increases by an additional 24%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>When HP is below 70%, CRIT Rate increases by an additional 24%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p> </p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Chests</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Instructor-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Instructor</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10007_4.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases Elemental Mastery by 80</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p> </p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Chests</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--The Exile-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>The Exile</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10009_4.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Energy Recharge +20%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p> </p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Chests</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Defender's Will-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Defender's Will</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10003_4.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>DEF +30%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>For each different element present in your own party, the wearer's Elemental RES to that corresponding element is increased by 30%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Hidden Palace of Zhou Formula</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Brave Heart-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Brave Heart</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10002_4.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>ATK +18%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases DMG by 30% against opponents with more than 50% HP</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Domain of Guyun</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Martial Artist-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Martial Artist</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10006_4.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases Normal Attack and Charged Attack DMG by 15%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Hidden Palace of Zhou Formula</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Gambler-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Gambler</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10008_4.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases Elemental Skill DMG by 20%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Defeating an opponent has a 100% chance to remove Elemental Skill CD. Can only occur once every 15s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Clear Pool and Mountain Cavern</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Scholar-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Scholar</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_10012_4.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Energy Recharge +20%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Gaining Elemental Particles or Orbs gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occur once every 3s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Clear Pool and Mountain Cavern</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Prayers for Illumination-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Prayers for Illumination</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15009_3.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Affected by Pyro for 40% less time</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p> </p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p> Pyro-Element Bosses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Prayers for Destiny-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Prayers for Destiny</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15010_3.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Affected by Hydro for 40% less time</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p> </p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Hydro-Element Bosses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Prayers for Wisdom-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Prayers for Wisdom</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15011_3.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Affected by Electro for 40% less time</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p> </p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Electro-Element Bosses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Prayers for Springtime-->
+                <div class="grid-cells col" data-four>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Prayers for Springtime</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15013_3.png" alt="" class="rank-four">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Affected by Cryo for 40% less time</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p> </p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Cryo-Element Bosses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Blizzard Strayer-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Blizzard Strayer</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_14001_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Cryo DMG Bonus +15%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>When a character attacks an opponent affected by Cryo, their CRIT Rate is increased by 20%. If the opponent is Frozen, CRIT Rate is increased by an additional 20%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Peak of Vindagnyr</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Chests</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Thundersoother-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Thundersoother</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_14002_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Electro RES increased by 40%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases DMG against opponents affected by Electro by 35%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Midsummer Courtyard</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Lavawalker-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Lavawalker</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_14003_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Pyro RES increased by 40%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases DMG against opponents affected by Pyro by 35%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Hidden Palace of Zhou Formula</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Maiden Beloved-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Maiden Beloved</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_14004_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>PCharacter Healing Effectiveness +15%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Valley of Remembrance</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Gladiator's Finale-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Gladiator's Finale</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15001_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>ATK +18%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p> </p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Boss Drops</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Viridescent Hunt-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Viridescent Hunt</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15002_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Anemo DMG Bonus +15%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Valley of Remembrance</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Wanderer's Troupe-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Wanderer's Troupe</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15003_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases Elemental Mastery by 80</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases Charged Attack DMG by 35% if the character uses a Catalyst or a Bow</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p> </p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p>Boss Drops</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Thundering Fury-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Thundering Fury</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15005_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Electro DMG Bonus +15%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases damage caused by Overloaded, Electro-Charged and Superconduct by 40%. Triggering such effects decreases Elemental Skill CD by 1s. Can only occur once every 0.8s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Midsummer Courtyard</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Crimson Witch of Flames-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Crimson Witch of Flames</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15006_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Pyro DMG Bonus +15%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using Elemental Skill increases the 2-Piece Set Bonus by 50% of its starting value for 10s. Max 3 stacks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Hidden Palace of Zhou Formula</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Noblesse Oblige-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Noblesse Oblige</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15007_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Elemental Burst DMG +20%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Clear Pool and Mountain Cavern</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Bloodstained Chivalry-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Bloodstained Chivalry</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15008_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Physical DMG +25%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Clear Pool and Mountain Cavern</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Archaic Petra-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Archaic Petra</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15014_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Gain a 15% Geo DMG Bonus</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain a 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Domain of Guyun</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Retracing Bolide-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Retracing Bolide</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15015_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases Shield Strength by 35%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>While protected by a shield, gain an additional 40% Normal and Charged Attack DMG</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Domain of Guyun</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Heart of Depth-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Heart of Depth</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15016_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Hydro DMG Bonus +15%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Peak of Vindagnyr</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Tenacity of Millelith-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Tenacity of Millelith</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15017_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>HHP increased by 20%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s. This effect can be triggered once every 0.5s. This effect can still be triggered even when the character who is using this artifact set is not on the field</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Ridge Watch</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Pale Flame-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Pale Flame</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15018_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Physical DMG is increased by 25%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Ridge Watch</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Shimenawa's Reminiscence-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Shimenawa's Reminiscence</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15019_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>ATK +18%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by 50% for 10s. This effect will not trigger again during that duration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Momiji-Dyed Court</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Emblem of Severed Fate-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Emblem of Severed Fate</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15020_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Energy Recharge +20%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Momiji-Dyed Court</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Husk of Opulent Dreams-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Husk of Opulent Dreams</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15021_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>DEF +30%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>A character equipped with this Artifact set will obtain the Curiosity effect in the following conditions: When on the field, the character gains 1 stack after hitting an opponent with a Geo attack, triggering a maximum of once every 0.3s. When off the field, the character gains 1 stack every 3s. Curiosity can stack up to 4 times, each providing 6% DEF and a 6% Geo DMG Bonus. When 6 seconds pass without gaining a Curiosity stack, 1 stack is lost</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Slumbering Court</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Ocean-Hued Clam-->
+                <div class="grid-cells col" data-five>
+                    <div class="content-box artifact-card">
+                        <div class="card-body artifact-card-body shaded-bg">
+                            <div class="artifact-name fw">
+                                <h3>Ocean-Hued Clam</h3>
+                                <hr>
+                            </div>
+                            <div class="artifact-main-dets flex-display fw">
+                                <div class="artifact-portrait">
+                                    <img src="https://api.ambr.top/assets/UI/reliquary/UI_RelicIcon_15022_4.png" alt="" class="rank-five">
+                                </div>
+                                <div class="artifact-set fw">
+                                    <h4>Set Bonus</h4>
+                                    <p>2 Set Bonus</p>
+                                    <ul>
+                                        <li>Healing Bonus +15%</li>
+                                    </ul>
+                                    <p>4 Set Bonus</p>
+                                    <ul>
+                                        <li>When the character equipping this artifact set heals a character in the party, a Sea-Dyed Foam will appear for 3 seconds, accumulating the amount of HP recovered from healing (including overflow healing). At the end of the duration, the Sea-Dyed Foam will explode, dealing DMG to nearby opponents based on 90% of the accumulated healing. (This DMG is calculated similarly to Reactions such as Electro-Charged, and Superconduct, but is not affected by Elemental Mastery, Character Levels, or Reaction DMG Bonuses). Only one Sea-Dyed Foam can be produced every 3.5 seconds. Each Sea-Dyed Foam can accumulate up to 30,000 HP (including overflow healing). There can be no more than one Sea-Dyed Foam active at any given time. This effect can still be triggered even when the character who is using this artifact set is not on the field</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="artifact-name fw">
+                                <hr>
+                            </div>
+                            <div class="artifact-details flex-display fw">
+                                <div class="domain-dets col">
+                                    <h4>Domain</h4>
+                                    <p>Slumbering Court</p>
+                                </div>
+                                <div class="rarity-dets col">
+                                    <h4>Max Rarity</h4>
+                                    <div class=""> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="other-dets col">
+                                    <h4>Other sources</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <footer class="footer">
+                <hr>
+                <ul class="footer-nav">
+                    <a href="about.html">About</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+                <span>©&nbsp;2019 -&nbsp;2022&nbsp; Genshin Impact DB Project</span>
+            </footer>
+        </section>
+        
+    </main>
+</body>
+</html>

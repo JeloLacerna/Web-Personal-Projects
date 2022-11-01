@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="Author" content="Jelouie Lacerna">
+        <meta name="Requirement-type" content="Project">
+        <title>Jelo | Project</title>
+        <link rel="stylesheet" href="Styles/styles.css" media="screen and (min-width: 1025px)">
+        <link rel="stylesheet" href="Styles/styles-mobile.css" media="screen and (min-width: 481px) and (max-width: 1024px)">
+        <link rel="stylesheet" href="Styles/sideways-style.css" media="screen and (max-width: 480px)">
+    </head>
+
+    <body>
+        <!--Main Start-->
+        <div id="main" class="page-wrapper about-page-wrapper">
+
+            <header id="header" class="header">
+                <div class="row">
+                    <div class="icon-container padding-apart">
+                        <a href="Index.html"><img src="Media/jelo.jpg" alt=""></a>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="hamburger-container padding-apart">
+                        <div class="hamburger-icon" id="hamburger-btn">
+                            <div class="menu-icon-top menu-icon-part"></div>
+                            <div class="menu-icon-middle menu-icon-part"></div>
+                            <div class="menu-icon-bottom menu-icon-part"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Ham Modal -->
+            <div id="ham-modal" class="modal-ham">
+                <!-- Modal content -->
+                <div class="modal-content-ham">
+                    <span class="modal-icon">
+                        <a href="Index.html"><img src="Media/jelo.jpg" alt=""></a>
+                    </span>
+                    <span class="close ham-close">&times;</span>
+                    <div class="menu-wrapper-modal">
+                        <div class="menu-container-modal"> 
+                            <h1 class="menu-h1 menu-top"><a href="Project.html">SELECTED PROJECTS</a></h1>
+                        </div>
+                        <div class="menu-container-modal">
+                            <h1 class="menu-h1 menu-mid"><a href="About.html">ABOUT</a></h1>
+                        </div>
+                        <div class="menu-container-modal">
+                            <h1 class="menu-h1 menu-bot"><a href="Contact.html">CONTACT</a></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            // Get the modal
+            var hamModal = document.getElementById("ham-modal");
+
+            // Get the button that opens the modal
+            var hamBtn = document.getElementById("hamburger-btn");
+
+            // Get the <span> element that closes the modal
+            var hamSpan = document.getElementsByClassName("ham-close")[0];
+
+            // When the user clicks the button, open the modal 
+            hamBtn.onclick = function() {
+                hamModal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            hamSpan.onclick = function() {
+                hamModal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == hamModal) {
+                    hamModal.style.display = "none";
+                }
+            }
+            </script>
+
+            <main class="main-project">
+                <div class="content padding-0">
+                    <div class="rows">
+                        <h2 class="page-title col-2 project-title">Selected Projects</h2>
+                    </div>
+                    <div class="rows">
+                        <div class="subtitle col-3">
+                            Some of the Projects I worked on while studying.
+                        </div>
+                    </div>
+                    <div class="downArrow bounce">
+                        <img width="40" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=" />
+                    </div>
+                </div>
+
+                <section class="content-section-projects grey-section" id="hanoigame">
+                    <div class="section-title-container rows">
+                        <span class="project-title-section">Tower of Hanoi Game with Autosolver</span>
+                        <span class="prog-lang">Programming Language: Java</span>
+                    </div>
+                    <div class="section-content-container rows">
+                        <div class="project-description">
+                            <p>
+                                This project is a Tower of Hanoi GUI game with account validation, 
+                                save and load game options, and an animated solution to the current game.
+                            </p>
+                            <p>
+                                This program uses JavaFX API to draw the UI to the user. It also employs JDBC connected to a MySQL database 
+                                for account validation. The animation is a series of Translation transition inside a Sequential transition. 
+                                The menu UI is built using Scene builder and FXML sheets, and the game UI is built manually using JavaFX statements.
+                            </p>
+                        </div>
+                        <div class="video-container">
+                            <figure>
+                                <video controls="controls" autoplay>
+                                    <source src="Media/Project Folder/Advanced Java/TowerOfHanoi.mkv" type="video/mp4">  
+                                    <p>Your browser does not support the HTML5 video element.</p>
+                                </video>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section-projects" id="vehiclesim">
+                    <div class="section-title-container rows">
+                        <span class="project-title-section">Vehicle Life Simulator</span>
+                        <span class="prog-lang">Programming Language: Java</span>
+                    </div>
+                    <div class="section-content-container rows">
+                        <div class="project-description">
+                            <p>
+                                This project is a vehicle simulator similar to a life simulator.
+                                The simulator is comprised of a field with 4 quadrants and vehicles of 4 types 
+                                - car, truck, sports car, and tractor. These vehicles will follow their own movement 
+                                every turn based on which type they are. The field is populated 
+                                by a number of these vehicles in random fashion.
+                            </p>
+                            <p>
+                                The vehicles move on a set pattern based on their type: cars move by 1 unit per turn, 
+                                trucks by 2 units on either a single direction or on both directions, sports cars by 1 
+                                unit but given 3 cycles each turn, and tractors by 1 unit but given 2 cycles each turn. 
+                                If the vehicles go over the edge of the field, they are ‘killed’. A ‘dead’ vehicle will 
+                                no longer move on the next turn. The simulation will end if all vehicles are ‘dead’ or 
+                                if the number of turns is exhausted.
+                            </p>
+                            <p>
+                                The simulator is what governs all processes with inside the simulation itself. This class ‘runs’ the 
+                                simulation and records all the path each vehicle object took during the simulation. Each turn the new 
+                                status of the vehicle objects are printed. After going through all of the simulation cycles, a summary 
+                                for every vehicle object is printed complete with the number of turns alive and the coordinates they took 
+                                during the simulation. Finally, the top 3 vehicle objects of each type are shown to the user.
+                            </p>
+                        </div>
+                        <div class="video-container">
+                            <figure>
+                                <video controls="controls" autoplay>
+                                    <source src="Media/Project Folder/Java/Project Screen Record.mkv" type="video/mp4">  
+                                    <p>Your browser does not support the HTML5 video element.</p>
+                                </video>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section-projects grey-section" id="atmsim">
+                    <div class="section-title-container rows">
+                        <span class="project-title-section">ATM Simulator</span>
+                        <span class="prog-lang">Programming Language: C#</span>
+                    </div>
+                    <div class="section-content-container rows">
+                        <div class="project-description">
+                            <p>
+                                This project is an Automatic Teller Machine simulator. This simulator is able to offer various 
+                                transactions to the user such as withdrawal, deposit, bills payment and funds transfer. 
+                                The ATM can also be serviced by an Administrator.
+                            </p>
+                            <p>
+                                This program uses UI elements created using windows forms complete with a screen, number pads and buttons.
+                            </p>
+                        </div>
+                        <div class="video-container">
+                            <figure>
+                                <video controls="controls" autoplay>
+                                    <source src="Media/Project Folder/CSharp/ATMSim.mkv" type="video/mp4">  
+                                    <p>Your browser does not support the HTML5 video element.</p>
+                                </video>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+                    
+                <section class="content-section-projects" id="thisweb">
+                    <div class="section-title-container rows">
+                        <span class="project-title-section">This Website</span>
+                        <span class="prog-lang">HTML/CSS</span>
+                    </div>
+                    <div class="section-content-container rows">
+                        <div class="project-description">
+                            <p>
+                                This is a personal website describing me, Jelo, the creator and maintainer of this website. 
+                                This website has responsive design and conforms to W3's guidelines for a modern website.
+                            </p>
+                            <p>
+                                This project is still on-going and and is being updated regularly.
+                            </p>
+                        </div>
+                        <div class="video-container">
+                            <figure>
+                                <video controls="controls" autoplay>
+                                    <source src="Media/Project Folder/HTML/ThisWeb.mkv" type="video/mp4">  
+                                    <p>Your browser does not support the HTML5 video element.</p>
+                                </video>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
+        <!--Main End-->
+
+        <!-- Footer start -->
+        <footer class="main-footer">
+            <div class="footer-container">
+
+                <div class="col">
+                    <p>Wanna get in touch?</p>
+                    <form action="" method="post" class="form-contact">
+                    <div class="input-field-container">
+                        <p>
+                            <input id="fieldName" name="cm-name" type="text" placeholder="Name">
+                        </p>
+                        <p>
+                            <input id="fieldEmail" name="cm-zedr-zedr" type="email" required="" placeholder="Email">
+                        </p>
+                    </div>
+                    <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="col">
+                    <p>More Juicy Deets</p>
+                    <p class="address"><a href="" target="_blank">108-14921 104 Ave <br> Surrey, BC V3R 1M8</a></p>
+                    <p class="phone"><a href="">604-###-####</a></p>
+                    <p class="email"><a href="">jlacerna24@protonmail.com</a></p>
+                    <p class="copyright">©2022 Copy Right</p>
+                </div>
+
+                <div class="col">
+                    <p>Let’s Get Social</p>
+                    <ul class="social-list list">
+                        <li><a href="https://www.facebook.com/lacernajelouie/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/jeloxidation/" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/JLacerna214" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/in/jelouie-lacerna-38851619b/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/JeloLacerna" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>

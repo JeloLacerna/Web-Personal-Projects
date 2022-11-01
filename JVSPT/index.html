@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDP | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8c9da4b746.js" crossorigin="anonymous"></script>
+    <script src="Scripts/modernizr.custom.05819.js" defer></script>
+    <script src="Scripts/scripts.js" defer></script>
+    <script src="Scripts/map-script.js"></script>
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-16x16.png" sizes="16x16">
+</head>
+<body>
+    <main class="main">
+        <aside class="sidebar shaded-bg">
+            <div class="logo-container">
+                <a href="">
+                    <img src="Media/White-logo.png" alt="">
+                </a>
+            </div>
+            <hr>
+            <div class="menu-container">
+                <ul class="navigation">
+                    <div class="title-card">
+                        Genshin Impact Database Project
+                    </div>
+                    <li>
+                        <a class="active" href="index.html"><img src="Media/Home.png" alt=""><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="characters.html"><img src="Media/Character.png" alt=""><span>Characters</span></a>
+                    </li>
+                    <li>
+                        <a href="events.html"><img src="Media/Event.png" alt=""><span>Events</span></a>
+                    </li>
+                    <li>
+                        <a href="weapons.html"><img src="Media/Weapon.png" alt=""><span>Weapons</span></a>
+                    </li>
+                    <li>
+                        <a href="artifacts.html"><img src="Media/Artifact.png" alt=""><span>Artifacts</span></a>
+                    </li>
+                    <li>
+                        <a href="calculator.html"><img src="Media/Calc.png" alt=""><span>Calculator</span></a>
+                    </li>
+                    <li>
+                        <a href="items.html"><img src="Media/Items.png" alt=""><span>Items</span></a>
+                    </li>
+                    <li>
+                        <a href="links.html"><img src="Media/Links.png" alt=""><span>Links</span></a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="content">
+            <div class="page-title-container">
+                <p class="border-b">Home</p>
+            </div>
+            <div class="content-main content-home shaded-bg fh">
+                <div class="content-column col">
+                    <div class="content-box col">
+                        <div class="card-body shaded-bg" id="server-timer">
+                            <h2 class="fw ta-center">Server Time</h2>
+                            <div class="flex-display fw ta-center">
+                                <div class="filter-button fw ta-center server-button" id="server-asia" data-server-button data-state="">
+                                    Asia
+                                </div>
+                                <div class="filter-button fw ta-center server-button" id="server-america" data-server-button data-state="active">
+                                    America
+                                </div>
+                                <div class="filter-button fw ta-center server-button" id="server-europe" data-server-button data-state="">
+                                    Europe
+                                </div>
+                            </div>
+                            <div class="fw col ta-center server-clock-container fh just-center flex-display">
+                                <p id="server-clock"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-box col">
+                        <div class="card-body shaded-bg sh-100">
+                            <h2>Ongoing Banners</h2>
+                            <div class="col main-banner-container" id="main-banner-container">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-column col">
+                    <div class="content-box col">
+                        <div class="card-body shaded-bg">
+                            <h2>Daily Farmable Materials</h2>
+                            <div class="ta-center fw flex-display" id="daily-farm">
+                                <div class="col" id="talent-books-container">
+                                    <h4 class="just-center">Talent Books</h4>
+                                </div>
+                                <div class="col" id="wea-asc-container">
+                                    <h4 class="alitems-center">Weapon Ascension</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-box col">
+                        <div class="card-body shaded-bg sh-100">
+                            <h2>Ongoing Events</h2>
+                            <div class="col main-banner-container" id="main-event-container">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <hr>
+                <ul class="footer-nav">
+                    <a href="about.html">About</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+                <span>©&nbsp;2019 -&nbsp;2022&nbsp; Genshin Impact DB Project</span>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

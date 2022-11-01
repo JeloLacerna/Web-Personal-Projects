@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDP | Items</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8c9da4b746.js" crossorigin="anonymous"></script>
+    <script src="Scripts/modernizr.custom.05819.js" defer></script>
+    <script src="Scripts/filter-scripts.js" defer></script>
+    <script src="Data/materials.js" defer></script>
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-16x16.png" sizes="16x16">
+</head>
+<body>
+    <main class="main">
+        <aside class="sidebar shaded-bg" id="sidebar">
+            <div class="logo-container">
+                <a href="">
+                    <img src="Media/White-logo.png" alt="">
+                </a>
+            </div>
+            <hr>
+            <div class="menu-container">
+                <ul class="navigation">
+                    <div class="title-card">
+                        Genshin Impact Database Project
+                    </div>
+                    <li>
+                        <a href="index.html"><img src="Media/Home.png" alt=""><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="characters.html"><img src="Media/Character.png" alt=""><span>Characters</span></a>
+                    </li>
+                    <li>
+                        <a href="events.html"><img src="Media/Event.png" alt=""><span>Events</span></a>
+                    </li>
+                    <li>
+                        <a href="weapons.html"><img src="Media/Weapon.png" alt=""><span>Weapons</span></a>
+                    </li>
+                    <li>
+                        <a href="artifacts.html"><img src="Media/Artifact.png" alt=""><span>Artifacts</span></a>
+                    </li>
+                    <li>
+                        <a href="calculator.html"><img src="Media/Calc.png" alt=""><span>Calculator</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="items.html"><img src="Media/Items.png" alt=""><span>Items</span></a>
+                    </li>
+                    <li>
+                        <a href="links.html"><img src="Media/Links.png" alt=""><span>Links</span></a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="content character-main-content" id="character-main-content" data-main>
+            <div class="page-title-container">
+                <p class="border-b">Items</p>
+            </div>
+            <div class="filter-bar col shaded-bg">
+                <div class="filter-row flex-display">
+                    <div class="filter-cat">
+                        <h3>Search</h3>
+                        <input type="text" name="item-search" id="item-search" placeholder="Search..." class="search-bar" onkeyup="itemSearch()">
+                    </div>
+                    <div class="filter-cat">
+                        <h3>Type</h3>
+                        <div class="filter-button-container flex-display" id="type-filter">
+                            <select name="mat-types" id="mat-types-selector" class="fw mat-types-selector" onchange="filterSelect()">
+                                <option value="all-items">All</option>
+                                <option value="local-mats">Local Specialties</option>
+                                <option value="common-asc">Common Ascension</option>
+                                <option value="weap-exp">Weapon Experience</option>
+                                <option value="weapon-asc">Weapon Ascension</option>
+                                <option value="char-exp">Character Experience</option>
+                                <option value="asc-mats">Character Ascension</option>
+                                <option value="asc-gem">Ascension Gem</option>
+                                <option value="talent-book">Talent Books</option>
+                                <option value="weekly-drops">Weekly Boss</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-cat">
+                        <h3>Rarity</h3>
+                        <div class="filter-button-container flex-display" id="rarity-filter">
+                            <div class="filter-button button-min-width filter-button-weapons" id="1S-filter-button" data-filter-rank-item data-filter-one>
+                                <span class="text-rarity" data-filter-rank-item data-filter-one>
+                                    1
+                                </span>
+                                <span class="stars" data-filter-rank-item data-filter-one>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-rank-item data-filter-one></i>
+                                </span>
+                            </div>
+                            <div class="filter-button button-min-width filter-button-weapons" id="2S-filter-button" data-filter-rank-item data-filter-two>
+                                <span class="text-rarity" data-filter-rank-item data-filter-two>
+                                    2
+                                </span>
+                                <span class="stars" data-filter-rank-item data-filter-two>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-rank-item data-filter-two></i>
+                                </span>
+                            </div>
+                            <div class="filter-button button-min-width filter-button-weapons" id="3S-filter-button" data-filter-rank-item data-filter-three>
+                                <span class="text-rarity" data-filter-rank-item data-filter-three>
+                                    3
+                                </span>
+                                <span class="stars" data-filter-rank-item data-filter-three>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-rank-item data-filter-three></i>
+                                </span>
+                            </div>
+                            <div class="filter-button button-min-width filter-button-weapons" id="4S-filter-button" data-filter-rank-item data-filter-four>
+                                <span class="text-rarity" data-filter-rank-item data-filter-four>
+                                    4
+                                </span>
+                                <span class="stars" data-filter-rank-item data-filter-four>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-rank-item data-filter-four></i>
+                                </span>
+                            </div>
+                            <div class="filter-button button-min-width filter-button-weapons" id="5S-filter-button" data-filter-rank-item data-filter-five>
+                                <span class="text-rarity" data-filter-rank-item data-filter-five>
+                                    5
+                                </span>
+                                <span class="stars" data-filter-rank-item data-filter-five>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-rank-item data-filter-five></i>
+                                </span>
+                            </div>
+                            <div class="filter-cat clear-button-cont">
+                                <button type="button" onclick="clearFilterItems()">Clear Filters</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="min-height-content">
+                <div class="content-main grid-9 shaded-bg" id="item-list">
+
+                </div>
+            </div>
+            <footer class="footer">
+                <hr>
+                <ul class="footer-nav">
+                    <a href="about.html">About</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+                <span>©&nbsp;2019 -&nbsp;2022&nbsp; Genshin Impact DB Project</span>
+            </footer>
+        </section>
+        
+    </main>
+</body>
+</html>

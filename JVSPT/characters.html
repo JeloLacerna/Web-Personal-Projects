@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDP | Characters</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8c9da4b746.js" crossorigin="anonymous"></script>
+    <script src="Scripts/modernizr.custom.05819.js" defer></script>
+    <script src="Scripts/filter-scripts.js" defer></script>
+    <script src="Data/characters.js" defer></script>
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-16x16.png" sizes="16x16">
+</head>
+<body>
+    <main class="main">
+        <aside class="sidebar shaded-bg" id="sidebar">
+            <div class="logo-container">
+                <a href="">
+                    <img src="Media/White-logo.png" alt="">
+                </a>
+            </div>
+            <hr>
+            <div class="menu-container">
+                <ul class="navigation">
+                    <div class="title-card">
+                        Genshin Impact Database Project
+                    </div>
+                    <li>
+                        <a href="index.html"><img src="Media/Home.png" alt=""><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="characters.html"><img src="Media/Character.png" alt=""><span>Characters</span></a>
+                    </li>
+                    <li>
+                        <a href="events.html"><img src="Media/Event.png" alt=""><span>Events</span></a>
+                    </li>
+                    <li>
+                        <a href="weapons.html"><img src="Media/Weapon.png" alt=""><span>Weapons</span></a>
+                    </li>
+                    <li>
+                        <a href="artifacts.html"><img src="Media/Artifact.png" alt=""><span>Artifacts</span></a>
+                    </li>
+                    <li>
+                        <a href="calculator.html"><img src="Media/Calc.png" alt=""><span>Calculator</span></a>
+                    </li>
+                    <li>
+                        <a href="items.html"><img src="Media/Items.png" alt=""><span>Items</span></a>
+                    </li>
+                    <li>
+                        <a href="links.html"><img src="Media/Links.png" alt=""><span>Links</span></a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="content character-main-content" id="character-main-content" data-main>
+            <div class="page-title-container">
+                <p class="border-b">Characters</p>
+            </div>
+
+            <div id="splash">
+                <!--
+                <div class="shaded-bg col flex-display block-display char-details">
+                    
+                    <span class="close-btn">&times;</span>
+                    <div class="char-name-main ta-center shaded-bg-hi">
+                        <h2 class="white-text border-b">Albedo</h2>
+                        <p>A genius known as the Kreideprinz, he is the Chief Alchemist and Captain of the Investigation Team of the Knights of Favonius.</p>
+                        <div class="ta-center">
+                            <h2 class="border-b">Knights of Favonius </h2>
+                            <p>Affiliation</p>
+                        </div>
+                        <div class="ta-center">
+                            <h2 class="border-b">Princeps Cretaceus</h2>
+                            <p>Constellation</p>
+                        </div>
+                        <div class="ta-center">
+                            <h2 class="border-b">0000-09-13 </h2>
+                            <p>Birthday</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                -->
+            </div>
+            
+            <div class="filter-bar col shaded-bg">
+                <div class="filter-row flex-display">
+                    <div class="filter-cat">
+                        <h3>Search</h3>
+                        <input type="text" name="char-search" id="char-search" placeholder="Search..." class="search-bar" onkeyup="charSearch()">
+                    </div>
+                    <div class="filter-cat">
+                        <h3>Element</h3>
+                        <div class="filter-button-container flex-display" id="element-filter">
+                            <div class="filter-button" id="Electro-filter-button" data-element-filter-electro data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Electric.png" alt="" data-element-filter-electro data-filter-char>
+                            </div>
+                            <div class="filter-button" id="Pyro-filter-button" data-element-filter-pyro data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" data-element-filter-pyro data-filter-char>
+                            </div>
+                            <div class="filter-button" id="Cryo-filter-button" data-element-filter-cryo data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" data-element-filter-cryo data-filter-char>
+                            </div>
+                            <div class="filter-button" id="Geo-filter-button" data-element-filter-geo data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Rock.png" alt="" data-element-filter-geo data-filter-char> 
+                            </div>
+                            <div class="filter-button" id="Hydro-filter-button" data-element-filter-hydro data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Water.png" alt="" data-element-filter-hydro data-filter-char>
+                            </div>
+                            <div class="filter-button" id="Anemo-filter-button" data-element-filter-anemo data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Wind.png" alt="" data-element-filter-anemo data-filter-char>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-cat">
+                        <h3>Weapon Type</h3>
+                        <div class="filter-button-container flex-display" id="weapon-filter">
+                            <div class="filter-button" id="Bow-filter-button" data-filter-bow data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Hunters.png" alt="" data-filter-bow data-filter-char>
+                            </div>
+                            <div class="filter-button" id="Catalyst-filter-button" data-filter-catalyst data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Apprentice.png" alt="" data-filter-catalyst data-filter-char>
+                            </div>
+                            <div class="filter-button" id="Claymore-filter-button" data-filter-claymore data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Aniki.png" alt="" data-filter-claymore data-filter-char>
+                            </div>
+                            <div class="filter-button" id="Polearm-filter-button" data-filter-polearm data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Gewalt.png" alt="" data-filter-polearm data-filter-char>
+                            </div>
+                            <div class="filter-button" id="Sword-filter-button" data-filter-sword data-filter-char>
+                                <img src="https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Blunt.png" alt="" data-filter-sword data-filter-char>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-cat">
+                        <h3>Rarity</h3>
+                        <div class="filter-button-container flex-display" id="rarity-filter">
+                            <div class="filter-button button-min-width" id="5S-filter-button" data-filter-five data-filter-char>
+                                <span class="text-rarity" data-filter-five data-filter-char>
+                                    5
+                                </span>
+                                <span class="stars" data-filter-five data-filter-char>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-five data-filter-char></i>
+                                </span>
+                            </div>
+                            <div class="filter-button button-min-width" id="4S-filter-button" data-filter-four data-filter-char>
+                                <span class="text-rarity" data-filter-four data-filter-char>
+                                    4
+                                </span>
+                                <span class="stars" data-filter-four data-filter-char>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-four data-filter-char></i>
+                                </span>
+                            </div>
+                            <div class="filter-cat clear-button-cont">
+                                <button type="button" onclick="clearFilters()">Clear Filters</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+            <div class="min-height-content">
+                <div class="content-main grid-9 shaded-bg" id="character-list">
+                    <!--Albedo-->
+                    <div class="grid-cells" data-geo data-sword data-five>
+                        <div class="character-link" id="albedo" data-geo data-sword data-five>
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Rock.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Albedo.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Albedo</span>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <!--Aloy-->
+                    <div class="grid-cells" data-cryo data-bow data-five>
+                        <div class="character-link" id="aloy">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Aloy.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Aloy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Amber-->
+                    <div class="grid-cells" data-pyro data-bow data-four>
+                        <div class="character-link" id="amber">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Ambor.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Amber</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Arataki Itto-->
+                    <div class="grid-cells" data-geo data-claymore data-five>
+                        <div class="character-link" id="arataki-itto">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Rock.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Itto.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Arataki Itto</span>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <!--Barbara-->
+                    <div class="grid-cells" data-hydro data-catalyst data-four>
+                        <div class="character-link" id="barbara">
+                        <div class="character-portrait-container">
+                            <div class="character-image-container rank-four">
+                                <span>
+                                    <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Water.png" alt="" class="element-icon"> <!--Element Icon-->
+                                    <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Barbara.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                </span>
+                                <div class="stars-container"> <!--Stars-->
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nameplate">
+                                <span class="character-name">Barbara</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!--Beidou-->
+                    <div class="grid-cells" data-electro data-claymore data-four>
+                        <div class="character-link" id="beidou">
+                        <div class="character-portrait-container">
+                            <div class="character-image-container rank-four">
+                                <span>
+                                    <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Electric.png" alt="" class="element-icon"> <!--Element Icon-->
+                                    <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Beidou.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                </span>
+                                <div class="stars-container"> <!--Stars-->
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nameplate">
+                                <span class="character-name">Beidou</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!--Bennet-->
+                    <div class="grid-cells" data-pyro data-sword data-four>
+                        <div class="character-link" id="bennett">
+                        <div class="character-portrait-container">
+                            <div class="character-image-container rank-four">
+                                <span>
+                                    <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                    <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Bennett.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                </span>
+                                <div class="stars-container"> <!--Stars-->
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nameplate">
+                                <span class="character-name">Bennet</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!--Chongyun-->
+                    <div class="grid-cells" data-cryo data-claymore data-four>
+                        <div class="character-link" id="chongyun">
+                        <div class="character-portrait-container">
+                            <div class="character-image-container rank-four">
+                                <span>
+                                    <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" class="element-icon"> <!--Element Icon-->
+                                    <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Chongyun.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                </span>
+                                <div class="stars-container"> <!--Stars-->
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nameplate">
+                                <span class="character-name">Chongyun</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!--Diluc-->
+                    <div class="grid-cells" data-pyro data-claymore data-five>
+                        <div class="character-link" id="diluc">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Diluc.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Diluc</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Diona-->
+                    <div class="grid-cells" data-cryo data-bow data-four>
+                        <div class="character-link" id="diona">
+                        <div class="character-portrait-container">
+                            <div class="character-image-container rank-four">
+                                <span>
+                                    <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" class="element-icon"> <!--Element Icon-->
+                                    <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Diona.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                </span>
+                                <div class="stars-container"> <!--Stars-->
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nameplate">
+                                <span class="character-name">Diona</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!--Eula-->
+                    <div class="grid-cells" data-cryo data-claymore data-five>
+                        <div class="character-link" id="eula">
+                        <div class="character-portrait-container">
+                            <div class="character-image-container rank-five">
+                                <span>
+                                    <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" class="element-icon"> <!--Element Icon-->
+                                    <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Eula.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                </span>
+                                <div class="stars-container"> <!--Stars-->
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nameplate">
+                                <span class="character-name">Eula</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!--Fischl-->
+                    <div class="grid-cells" data-electro data-bow data-four>
+                        <div class="character-link" id="fischl">
+                        <div class="character-portrait-container">
+                            <div class="character-image-container rank-four">
+                                <span>
+                                    <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Electric.png" alt="" class="element-icon"> <!--Element Icon-->
+                                    <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Fischl.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                </span>
+                                <div class="stars-container"> <!--Stars-->
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nameplate">
+                                <span class="character-name">Fischl</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!--Ganyu-->
+                    <div class="grid-cells" data-cryo data-bow data-five>
+                        <div class="character-link" id="ganyu">
+                        <div class="character-portrait-container">
+                            <div class="character-image-container rank-five">
+                                <span>
+                                    <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" class="element-icon"> <!--Element Icon-->
+                                    <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Ganyu.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                </span>
+                                <div class="stars-container"> <!--Stars-->
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nameplate">
+                                <span class="character-name">Ganyu</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!--Gorou-->
+                    <div class="grid-cells" data-geo data-bow data-four>
+                        <div class="character-link" id="gorou">
+                        <div class="character-portrait-container">
+                            <div class="character-image-container rank-four">
+                                <span>
+                                    <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Rock.png" alt="" class="element-icon"> <!--Element Icon-->
+                                    <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Gorou.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                </span>
+                                <div class="stars-container"> <!--Stars-->
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nameplate">
+                                <span class="character-name">Gorou</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!--Hu Tao-->
+                    <div class="grid-cells" data-pyro data-polearm data-five>
+                        <div class="character-link" id="hu-tao">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Hutao.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Hu Tao</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Jean-->
+                    <div class="grid-cells" data-anemo data-sword data-five>
+                        <div class="character-link" id="jean">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Wind.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Qin.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Jean</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Kaedehara Kazuha-->
+                    <div class="grid-cells" data-anemo data-sword data-five>
+                        <div class="character-link" id="kazuha">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Wind.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Kazuha.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Kaedehara Kazuha</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Kaeya-->
+                    <div class="grid-cells" data-cryo data-sword data-four>
+                        <div class="character-link" id="kaeya">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Kaeya.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Kaeya</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Kamisato Ayaka-->
+                    <div class="grid-cells" data-cryos data-sword data-five>
+                        <div class="character-link" id="kamisatoayaka">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Ayaka.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Kamisato Ayaka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Keqing-->
+                    <div class="grid-cells" data-electro data-sword data-five>
+                        <div class="character-link" id="keqing">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Electric.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Keqing.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Keqing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Klee-->
+                    <div class="grid-cells" data-pyro data-catalyst data-five>
+                        <div class="character-link" id="klee">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Klee.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Klee</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Kujou Sara-->
+                    <div class="grid-cells" data-electro data-bow data-four>
+                        <div class="character-link" id="sara">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Electric.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Sara.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Kujou Sara</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Lisa-->
+                    <div class="grid-cells" data-elextro data-catalyst data-four>
+                        <div class="character-link" id="lisa">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Electric.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Lisa.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Lisa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Mona-->
+                    <div class="grid-cells" data-hydro data-catalyst data-five>
+                        <div class="character-link" id="mona">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Water.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Mona.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Mona</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Nigguang-->
+                    <div class="grid-cells" data-geo data-catalyst data-four>
+                        <div class="character-link" id="ningguang">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Rock.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Ningguang.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Ningguang</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Noelle-->
+                    <div class="grid-cells" data-geo data-claymore data-four>
+                        <div class="character-link" id="noelle">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Rock.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Noel.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Noelle</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Qiqi-->
+                    <div class="grid-cells" data-cryo data-sword data-five>
+                        <div class="character-link" id="qiqi">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Qiqi.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Qiqi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Raiden Shogun-->
+                    <div class="grid-cells" data-electro data-polearm data-five>
+                        <div class="character-link" id="raiden">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Electric.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Shougun.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Raiden Shogun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Razor-->
+                    <div class="grid-cells" data-electro data-claymore data-four>
+                        <div class="character-link" id="razor">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Electric.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Razor.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Razor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Rosaria-->
+                    <div class="grid-cells" data-cryo data-polearm data-four>
+                        <div class="character-link" id="rosaria">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Rosaria.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Rosaria</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sangonomiya Kokomi-->
+                    <div class="grid-cells" data-hydro data-catalyst data-five>
+                        <div class="character-link" id="sangonomiyakokomi">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Water.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Kokomi.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Sangonomiya Kokomi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sayu-->
+                    <div class="grid-cells" data-anemo data-claymore data-four>
+                        <div class="character-link" id="sayu">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Wind.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Sayu.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Sayu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Shenhe-->
+                    <div class="grid-cells" data-cryo data-polearm data-five>
+                        <div class="character-link" id="shenhe">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Ice.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Shenhe.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Shenhe</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sucrose-->
+                    <div class="grid-cells" data-anemo data-catalyst data-four>
+                        <div class="character-link" id="sucrose">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Wind.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Sucrose.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Sucrose</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Tartaglia-->
+                    <div class="grid-cells" data-hydro data-bow data-five>
+                        <div class="character-link" id="tartaglia">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Water.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Tartaglia.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Tartaglia (Childe)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Thoma-->
+                    <div class="grid-cells" data-pyro data-polearm data-four>
+                        <div class="character-link" id="thoma">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Tohma.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Thoma</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Venti-->
+                    <div class="grid-cells" data-anemo data-bow data-five>
+                        <div class="character-link" id="venti">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Wind.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Venti.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Venti</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Xiangling-->
+                    <div class="grid-cells" data-pyro data-polearm data-four>
+                        <div class="character-link" id="xiangling">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Xiangling.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Xiangling</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Xiao-->
+                    <div class="grid-cells" data-anemo data-polearm data-five>
+                        <div class="character-link" id="xiao">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Wind.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Xiao.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Xiao</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Xingqiu-->
+                    <div class="grid-cells" data-hydro data-sword data-for>
+                        <div class="character-link" id="xingqiu">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Water.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Xingqiu.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Xingqiu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Xinyan-->
+                    <div class="grid-cells" data-pyro data-claymore data-four>
+                        <div class="character-link" id="xinyan">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Xinyan.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Xinyan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Yae Miko-->
+                    <div class="grid-cells" data-electro data-catalyst data-five>
+                        <div class="character-link"  id="yaemiko">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Electric.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Yae.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Yae Miko</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Yanfei-->
+                    <div class="grid-cells" data-pyro data-catalyst data-four>
+                        <div class="character-link"  id="yanfei">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Feiyan.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Yanfei </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Yoimiya-->
+                    <div class="grid-cells" data-pyro data-bow data-five>
+                        <div class="character-link"  id="yoimiya">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Yoimiya.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Yoimiya</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Yun Jin-->
+                    <div class="grid-cells" data-geo data-polearm data-four>
+                        <div class="character-link"  id="yun-jin">
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-four">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Fire.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Yunjin.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Yun Jin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Zhongli-->
+                    <div class="grid-cells">
+                        <div class="character-link" id="zhongli" data-geo data-polearm data-five>
+                            <div class="character-portrait-container">
+                                <div class="character-image-container rank-five">
+                                    <span>
+                                        <img src="https://api.ambr.top/assets/UI/UI_Buff_Element_Rock.png" alt="" class="element-icon"> <!--Element Icon-->
+                                        <img src="https://api.ambr.top/assets/UI/UI_AvatarIcon_Zhongli.png" alt="" class="character-icon"> <!--Face Portrait-->
+                                    </span>
+                                    <div class="stars-container"> <!--Stars-->
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="stars">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="nameplate">
+                                    <span class="character-name">Zhongli</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </div>
+            <footer class="footer">
+                <hr>
+                <ul class="footer-nav">
+                    <a href="about.html">About</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+                <span>©&nbsp;2019 -&nbsp;2022&nbsp; Genshin Impact DB Project</span>
+            </footer>
+        </section>
+        
+    </main>
+</body>
+</html>

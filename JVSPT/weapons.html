@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDP | Weapons</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8c9da4b746.js" crossorigin="anonymous"></script>
+    <script src="Scripts/modernizr.custom.05819.js" defer></script>
+    <script src="Scripts/filter-scripts.js" defer></script>
+    <script src="Data/weapons.js" defer></script>
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-16x16.png" sizes="16x16">
+</head>
+<body>
+    <main class="main">
+        <aside class="sidebar shaded-bg">
+            <div class="logo-container">
+                <a href="">
+                    <img src="Media/White-logo.png" alt="">
+                </a>
+            </div>
+            <hr>
+            <div class="menu-container">
+                <ul class="navigation">
+                    <div class="title-card">
+                        Genshin Impact Database Project
+                    </div>
+                    <li>
+                        <a href="index.html"><img src="Media/Home.png" alt=""><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="characters.html"><img src="Media/Character.png" alt=""><span>Characters</span></a>
+                    </li>
+                    <li>
+                        <a href="events.html"><img src="Media/Event.png" alt=""><span>Events</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="weapons.html"><img src="Media/Weapon.png" alt=""><span>Weapons</span></a>
+                    </li>
+                    <li>
+                        <a href="artifacts.html"><img src="Media/Artifact.png" alt=""><span>Artifacts</span></a>
+                    </li>
+                    <li>
+                        <a href="calculator.html"><img src="Media/Calc.png" alt=""><span>Calculator</span></a>
+                    </li>
+                    <li>
+                        <a href="items.html"><img src="Media/Items.png" alt=""><span>Items</span></a>
+                    </li>
+                    <li>
+                        <a href="links.html"><img src="Media/Links.png" alt=""><span>Links</span></a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="content">
+            <div class="page-title-container">
+                <p class="border-b">Weapons</p>
+            </div>
+            <div class="filter-bar col shaded-bg">
+                <div class="filter-row flex-display">
+                    <div class="filter-cat">
+                        <h3>Search</h3>
+                        <input type="text" name="weap-search" id="weap-search" placeholder="Search..." class="search-bar" onkeyup="weapSearch()">
+                    </div>
+                    <div class="filter-cat">
+                        <h3>Weapon Type</h3>
+                        <div class="filter-button-container flex-display" id="weapon-filter">
+                            <div class="filter-button" id="Bow-filter-button" data-filter-bow data-filter-weapon data-state="">
+                                <img src="https://api.ambr.top/assets/UI/UI_EquipIcon_Bow_Hunters.png" alt="" data-filter-bow data-filter-weapon data-state="">
+                            </div>
+                            <div class="filter-button" id="Catalyst-filter-button" data-filter-catalyst data-filter-weapon data-state="">
+                                <img src="https://api.ambr.top/assets/UI/UI_EquipIcon_Catalyst_Apprentice.png" alt="" data-filter-catalyst data-filter-weapon data-state="">
+                            </div>
+                            <div class="filter-button" id="Claymore-filter-button" data-filter-claymore data-filter-weapon data-state="">
+                                <img src="https://api.ambr.top/assets/UI/UI_EquipIcon_Claymore_Aniki.png" alt="" data-filter-claymore data-filter-weapon data-state="">
+                            </div>
+                            <div class="filter-button" id="Polearm-filter-button" data-filter-polearm data-filter-weapon data-state="">
+                                <img src="https://api.ambr.top/assets/UI/UI_EquipIcon_Pole_Gewalt.png" alt="" data-filter-polearm data-filter-weapon data-state="">
+                            </div>
+                            <div class="filter-button" id="Sword-filter-button" data-filter-sword data-filter-weapon data-state="">
+                                <img src="https://api.ambr.top/assets/UI/UI_EquipIcon_Sword_Blunt.png" alt="" data-filter-sword data-filter-weapon data-state="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-cat">
+                        <h3>Rarity</h3>
+                        <div class="filter-button-container flex-display" id="rarity-filter">
+                            <div class="filter-button button-min-width filter-button-weapons" id="1S-filter-button" data-filter-rank data-filter-one>
+                                <span class="text-rarity" data-filter-rank data-filter-one>
+                                    1
+                                </span>
+                                <span class="stars" data-filter-rank data-filter-one>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-rank data-filter-one></i>
+                                </span>
+                            </div>
+                            <div class="filter-button button-min-width filter-button-weapons" id="2S-filter-button" data-filter-rank data-filter-two>
+                                <span class="text-rarity" data-filter-rank data-filter-two>
+                                    2
+                                </span>
+                                <span class="stars" data-filter-rank data-filter-two>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-rank data-filter-two></i>
+                                </span>
+                            </div>
+                            <div class="filter-button button-min-width filter-button-weapons" id="3S-filter-button" data-filter-rank data-filter-three>
+                                <span class="text-rarity" data-filter-rank data-filter-three>
+                                    3
+                                </span>
+                                <span class="stars" data-filter-rank data-filter-three>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-rank data-filter-three></i>
+                                </span>
+                            </div>
+                            <div class="filter-button button-min-width filter-button-weapons" id="4S-filter-button" data-filter-rank data-filter-four>
+                                <span class="text-rarity" data-filter-rank data-filter-four>
+                                    4
+                                </span>
+                                <span class="stars" data-filter-rank data-filter-four>
+                                    <i class="fa fa-star" data-filter-rank aria-hidden="true" data-filter-four></i>
+                                </span>
+                            </div>
+                            <div class="filter-button button-min-width filter-button-weapons" id="5S-filter-button" data-filter-rank data-filter-five>
+                                <span class="text-rarity" data-filter-rank data-filter-five>
+                                    5
+                                </span>
+                                <span class="stars" data-filter-rank data-filter-five>
+                                    <i class="fa fa-star" aria-hidden="true" data-filter-rank data-filter-five></i>
+                                </span>
+                            </div>
+                            
+                            <div class="filter-cat clear-button-cont">
+                                <button type="button" onclick="clearFiltersWeaps()">Clear Filters</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="min-height-content">
+                <div class="content-main grid-9 shaded-bg" id="weapon-list">
+
+                </div>
+            </div>
+            <footer class="footer">
+                <hr>
+                <ul class="footer-nav">
+                    <a href="about.html">About</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+                <span>©&nbsp;2019 -&nbsp;2022&nbsp; Genshin Impact DB Project</span>
+            </footer>
+            <div>
+                
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>

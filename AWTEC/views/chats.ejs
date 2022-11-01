@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats</title>
+    <link rel="stylesheet" href="http://localhost:3000/styles/chat-styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var from = null,
+            urlGet = 'http://localhost:3000/getmessage/',
+            urlSend = 'http://localhost:3000/sendmessage'
+        let start = 0
+
+        sender = "<%= user.firstname %>"
+
+        $(document).ready(
+            function () {
+                load(start)
+
+                var loadInterval
+
+                loadInterval = setInterval(function () {
+                    load(start)
+                }, 1500)
+
+                $('form').submit(function (e) {
+
+                    e.preventDefault()
+
+                    $.post(urlSend, {
+                        message: $('#message').val(),
+                        sender: sender
+                    })
+
+                    $('#message').val('')
+                    
+                    console.log('here')
+                })
+            }
+        )
+
+        function load() {
+            $.get(urlGet + start, (result) => {
+                if (result.length <= 0) {
+                    console.log('No Messages left at ID = ' + start)
+                } else {
+                    console.log('Printing Messages #' + start)
+                    result.forEach(chat => {
+                        console.log('start ' + start)
+                        console.log('id ' + chat.messageid)
+                        start = chat.messageid
+                        $('#chat').append(renderMessage(chat))
+                    })
+                    $('#chat').animate({
+                        scrollTop: $('#chat')[0].scrollHeight
+                    })
+                }
+            })
+        }
+
+        function renderMessage(chat) {
+
+            var time = new Date(chat.createdAt);
+            time = `${time.getHours()}:${time.getMinutes() < 10 ? '0' : ''}${time.getMinutes()}`
+
+            if (chat.sender === sender) {
+                return `
+                    <li class="me">
+                        <div class="entete">
+                            <h3>${time}</h3>
+                            <h2>${chat.sender}</h2>
+                        </div>
+                        <div class="triangle"></div>
+                        <div class="message">
+                            ${chat.message}
+                        </div>
+                    </li>`
+            } else {
+                return `
+                    <li class="you">
+                        <div class="entete">
+                            <h3>${time}</h3>
+                            <h2>${chat.sender}</h2>
+                        </div>
+                        <div class="triangle"></div>
+                        <div class="message">
+                            ${chat.message}
+                        </div>
+                    </li>`
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <main>
+            <header>
+                <div>
+                    <p>General Chatting Place</p>
+                    <h2>Chatting with all Users</h2>
+                </div>
+                <div id="profile-container">
+                    <p>Account</p>
+                    <h2>Hi <%= user.firstname %>
+                    </h2>
+                    <a href="/logout">Logout</a>
+                </div>
+            </header>
+            <ul id="chat">
+            </ul>
+
+            <form class="chat-form">
+                <div>
+                    <input type="text" placeholder="Type your message" name="message" id="message" autocomplete="off"
+                        autofocus required></input>
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>

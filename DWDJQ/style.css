@@ -1,0 +1,410 @@
+@font-face {
+    font-family: 'EightBitDragon';
+    src: url(./content/font/eight-bit-dragon-font/EightBitDragon-anqx.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Fedora';
+    src: url(./content/font/sffedora/SFFedora.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial Narrow Bold';
+    src: url(./content/font/arial-narrow-bold/ARIALNBI.TTF);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Press Start 2 P';
+    src: url(./content/font/pressstart/PressStart2P-Regular.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2 P";
+}
+
+h3 {
+    font-size: 8rem;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+}
+
+span {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#main {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+}
+
+#main>.content-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#main>.content-container:nth-child(1) {
+    background-image: url(./content/images/main.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main>.content-container:nth-child(2) {
+    background-image: url(./content/images/2nd.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main>.content-container:nth-child(3) {
+    background-image: url(./content/images/2nd.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main>.content-container:nth-child(4) {
+    background-image: url(./content/images/floating-islands.png), url(./content/images/skybox.jpg);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+}
+
+#main>.content-container:nth-child(5) {
+    background-image: url(./content/images/last.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#main-image {
+    width: 93px;
+    height: 103px;
+    position: absolute;
+
+    top: 60%;
+    left: 26%;
+    /* original
+    top: 60%
+    left: 26%
+    */
+    background: url(./content/poses/idle.png) 0px 0px;
+    transform: scale(2, 2)
+}
+
+#first-image {
+    width: 93px;
+    height: 103px;
+    position: absolute;
+    display: none;
+
+    top: 61%;
+    left: 80%;
+    /* original
+    top: 61%;
+    left: 80%;
+    */
+    background: url(./content/poses/idle.png) 0px 0px;
+    transform: scale(2, 2)
+}
+
+#sec-image {
+    width: 93px;
+    height: 103px;
+    position: absolute;
+    display: none;
+
+    top: 56%;
+    left: 180%;
+    /* original
+    top: 56%;
+    left: 180%;
+    */
+    background: url(./content/poses/idle.png) 0px 0px;
+    transform: scale(2, 2)
+}
+
+#third-image {
+    width: 93px;
+    height: 103px;
+    position: absolute;
+    display: none;
+
+    top: -20%;
+    left: 290%;
+    /* original
+    top: -20%;
+    left: 290%;
+
+    drop
+    top: 12%;
+    left: 305%;
+    */
+    background: url(./content/poses/fall.png) 0px 0px;
+    transform: scale(1.5, 1.5)
+}
+
+#fourth-image {
+    width: 93px;
+    height: 103px;
+    position: absolute;
+    display: none;
+
+    top: 10%;
+    left: 380%;
+    /* original
+    top: 10%;
+    left: 380%;
+
+    drop
+    top: 68%;
+    left: 405%;
+    */
+    background: url(./content/poses/fall.png) 0px 0px;
+    transform: scale(2, 2)
+}
+
+#main-image,
+#first-image,
+#sec-image,
+#third-image,
+#fourth-image {
+    z-index: 100;
+}
+
+#main-banner {
+    position: absolute;
+    left: 50%;
+    top: -15%;
+    height: 100%;
+    opacity: 50%;
+    /*
+    original
+    top: -6%;
+    */
+}
+
+#main-banner>p:first-child {
+    font-family: 'SF Fedora';
+    font-size: 12rem;
+    padding: 2rem 3.5rem 2rem 2rem;
+    margin: 0;
+    top: 0;
+    transform: translate(-50%, 0) rotate(-6deg) skew(-6deg);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.gradient-clip {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(231, 205, 205, 1) 0%, rgba(200, 52, 52, 1) 93%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#main-banner>p:nth-child(2n),
+#main-banner>p:nth-child(3n) {
+    position: absolute;
+    font-family: 'Arial Narrow Bold';
+    font-size: 6rem;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, 0) skew(-6deg);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    color: maroon;
+}
+
+#main-banner>p:nth-child(2n) {
+    top: 24%;
+    left: 74%;
+    /*
+    original
+    top: 24%;
+    left: 24%;
+    */
+    opacity: 0;
+}
+
+#main-banner>p:nth-child(3n) {
+    top: 32%;
+    left: -31%;
+    /*
+    original
+    top: 32%;
+    left: 11%;
+    */
+    opacity: 0;
+}
+
+#main-banner>p {
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+#main-speech {
+    position: absolute;
+    height: 180px;
+    width: 603px;
+    background: url(./content/speech-bubbles/main-bubble.png) 0px 0px;
+    top: 42%;
+    left: 17%;
+    transform: scale(.5, .5);
+    opacity: 0;
+}
+
+#tbc-img {
+    background: url(./content/images/tbc-image.png) 0px 0px;
+    width: 1024px;
+    height: 232px;
+    position: absolute;
+    left: 500%;
+    top: 70%;
+    transform: scale(.45, .45)
+}
+
+.year-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.year {
+    position: relative;
+    top: -20%;
+    opacity: 0;
+}
+
+#last-year {
+    position: relative;
+    display: flex;
+    top: -20%;
+    opacity: 0;
+}
+
+#last-year>p {
+    font-size: 8rem;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.nes-container {
+    position: absolute;
+    width: 60%;
+    height: fit-content;
+    background-color: white;
+}
+
+.title {
+    font-weight: bold;
+}
+
+#mar-2013 {
+    top: 20%;
+    left: 5%;
+}
+
+#jun-2013 {
+    top: 20%;
+    left: -10%;
+}
+
+#uni-years {
+    top: 10%;
+    left: 5%;
+}
+
+#jul-2018 {
+    top: 10%;
+    left: -10%;
+}
+
+#jul-2019 {
+    top: 40%;
+    left: 5%;
+    width: 90%;
+}
+
+#aug-2019 {
+    top: 10%;
+    left: -25%;
+    width: 90%;
+}
+
+#nov-2019 {
+    top: 10%;
+    left: -30%;
+    width: 90%;
+}
+
+#oct-2020 {
+    top: 5%;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#aug-2021 {
+    top: 5%;
+    width: 90%;
+    transform: translateX(-15%);
+}
+
+#ending-screen {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: -25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ending-screen>P {
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+.icon-list {
+    background-color: rgba(0, 0, 0, .4);
+    width: fit-content;
+}

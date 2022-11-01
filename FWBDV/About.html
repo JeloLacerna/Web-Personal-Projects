@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="Author" content="Jelouie Lacerna">
+        <meta name="Requirement-type" content="Project">
+        <title>Jelo | About</title>
+        <link rel="stylesheet" href="Styles/styles.css" media="screen and (min-width: 1025px)">
+        <link rel="stylesheet" href="Styles/styles-mobile.css" media="screen and (min-width: 481px) and (max-width: 1024px)">
+        <link rel="stylesheet" href="Styles/sideways-style.css" media="screen and (max-width: 480px)">
+    </head>
+
+    <body>
+        <!--Main Start-->
+        <div id="main" class="page-wrapper about-page-wrapper">
+
+            <header id="header" class="header">
+                <div class="row">
+                    <div class="icon-container padding-apart">
+                        <a href="Index.html"><img src="Media/jelo.jpg" alt=""></a>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="hamburger-container padding-apart">
+                        <div class="hamburger-icon" id="hamburger-btn">
+                            <div class="menu-icon-top menu-icon-part"></div>
+                            <div class="menu-icon-middle menu-icon-part"></div>
+                            <div class="menu-icon-bottom menu-icon-part"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Ham Modal -->
+            <div id="ham-modal" class="modal-ham">
+                <!-- Modal content -->
+                <div class="modal-content-ham">
+                    <span class="modal-icon">
+                        <a href="Index.html"><img src="Media/jelo.jpg" alt=""></a>
+                    </span>
+                    <span class="close ham-close">&times;</span>
+                    <div class="menu-wrapper-modal">
+                        <div class="menu-container-modal"> 
+                            <h1 class="menu-h1 menu-top"><a href="Project.html">SELECTED PROJECTS</a></h1>
+                        </div>
+                        <div class="menu-container-modal">
+                            <h1 class="menu-h1 menu-mid"><a href="About.html">ABOUT</a></h1>
+                        </div>
+                        <div class="menu-container-modal">
+                            <h1 class="menu-h1 menu-bot"><a href="Contact.html">CONTACT</a></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            // Get the modal
+            var hamModal = document.getElementById("ham-modal");
+
+            // Get the button that opens the modal
+            var hamBtn = document.getElementById("hamburger-btn");
+
+            // Get the <span> element that closes the modal
+            var hamSpan = document.getElementsByClassName("ham-close")[0];
+
+            // When the user clicks the button, open the modal 
+            hamBtn.onclick = function() {
+                hamModal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            hamSpan.onclick = function() {
+                hamModal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == hamModal) {
+                    hamModal.style.display = "none";
+                }
+            }
+            </script>
+
+            <main class="main-about">
+                <div class="content">
+                    <div class="rows">
+                        <h2 class="page-title col-2">About</h2>
+                    </div>
+                    <div class="rows">
+                        <div class="article-container">
+                            <div class="title-container">
+                                <article class="article-section">
+                                <h2 class="section-title">Jelouie Lacerna</h2>
+                                <div class="subtitle">
+                                    Just some random guy trying to learn how to code.
+                                </div>
+                                </article>
+                            </div>
+                            <div class="img-container-about">
+                                <img src="Media/jelo.jpg" alt="" class="prof-pic">
+                            </div>
+                        </div>
+                        
+                        <div class="para-container">
+                            <p>
+                                Hi, I’m Jelouie, or as my family and friends affectionately call me, Jelo. As far as I'm concerned, 
+                                I'm the only one in the Philippines, or maybe in the world, with that name. Crazy right?
+                            </p>
+                            <p>
+                                I grew up curious of how things work. I would wonder how a remote-controlled toy car get's the input I give it using the controls.
+                                How a TV would show  a moving picture on its big screen. How people could communicate using small devices called cellphone over long distances.
+                                This curiosity over devices led me to pursue an engineering degree, although not electronics major, but chemical. Why? Because why not.
+                                And also, I just like how 'Chemical Engineer' sounds.
+                            </p>
+                            <p>
+                                After college, I wanted to immediately get a job so I applied to a bunch of companies but world said "F you" to everyone and the pandemic happened.
+                                So I decided to migrate to Canada with my family to, hopefully, have better opportunities. My degree isn't really recognized here so I to study again…
+                            </p>
+                            <p>
+                                …and here I am now, studying to be a developer!
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+        <!--Main End-->
+
+        <!-- Footer start -->
+        <footer class="main-footer">
+            <div class="footer-container">
+
+                <div class="col">
+                    <p>Wanna get in touch?</p>
+                    <form action="" method="post" class="form-contact">
+                    <div class="input-field-container">
+                        <p>
+                            <input id="fieldName" name="cm-name" type="text" placeholder="Name">
+                        </p>
+                        <p>
+                            <input id="fieldEmail" name="cm-zedr-zedr" type="email" required="" placeholder="Email">
+                        </p>
+                    </div>
+                    <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="col">
+                    <p>More Juicy Deets</p>
+                    <p class="address"><a href="" target="_blank">108-14921 104 Ave <br> Surrey, BC V3R 1M8</a></p>
+                    <p class="phone"><a href="">604-###-####</a></p>
+                    <p class="email"><a href="">jlacerna24@protonmail.com</a></p>
+                    <p class="copyright">©2022 Copy Right</p>
+                </div>
+
+                <div class="col">
+                    <p>Let’s Get Social</p>
+                    <ul class="social-list list">
+                        <li><a href="https://www.facebook.com/lacernajelouie/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/jeloxidation/" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/JLacerna214" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/in/jelouie-lacerna-38851619b/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/JeloLacerna" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="Author" content="Jelouie Lacerna">
+        <meta name="Requirement-type" content="Project">
+        <title>Jelo | Home</title>
+        <link rel="stylesheet" href="Styles/styles.css" media="screen and (min-width: 1025px)">
+        <link rel="stylesheet" href="Styles/styles-mobile.css" media="screen and (min-width: 481px) and (max-width: 1024px)">
+        <link rel="stylesheet" href="Styles/sideways-style.css" media="screen and (max-width: 480px)">
+    </head>
+
+    <body>
+        <!--Main Start-->
+        <div id="main" class="page-wrapper">
+
+            <header id="header" class="header">
+                <div class="row">
+                    <div class="icon-container padding-apart">
+                        <a href="Index.html"><img src="Media/jelo.jpg" alt=""></a>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="hamburger-container padding-apart">
+                        <div class="hamburger-icon" id="hamburger-btn">
+                            <div class="menu-icon-top menu-icon-part"></div>
+                            <div class="menu-icon-middle menu-icon-part"></div>
+                            <div class="menu-icon-bottom menu-icon-part"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Ham Modal -->
+            <div id="ham-modal" class="modal-ham">
+                <!-- Modal content -->
+                <div class="modal-content-ham">
+                    <span class="modal-icon">
+                        <a href="Index.html"><img src="Media/jelo.jpg" alt=""></a>
+                    </span>
+                    <span class="close ham-close">&times;</span>
+                    <div class="menu-wrapper-modal">
+                        <div class="menu-container-modal"> 
+                            <h1 class="menu-h1 menu-top"><a href="Project.html">SELECTED PROJECTS</a></h1>
+                        </div>
+                        <div class="menu-container-modal">
+                            <h1 class="menu-h1 menu-mid"><a href="About.html">ABOUT</a></h1>
+                        </div>
+                        <div class="menu-container-modal">
+                            <h1 class="menu-h1 menu-bot"><a href="Contact.html">CONTACT</a></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            // Get the modal
+            var hamModal = document.getElementById("ham-modal");
+
+            // Get the button that opens the modal
+            var hamBtn = document.getElementById("hamburger-btn");
+
+            // Get the <span> element that closes the modal
+            var hamSpan = document.getElementsByClassName("ham-close")[0];
+
+            // When the user clicks the button, open the modal 
+            hamBtn.onclick = function() {
+                hamModal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            hamSpan.onclick = function() {
+                hamModal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == hamModal) {
+                    hamModal.style.display = "none";
+                }
+            }
+            </script>
+
+            <main class="home-main">
+                <!--Intro section-->
+                <section class="intro-section content-sections">
+                    <div class="table">
+                        <div class="content-container table-cell">
+                            <div class="statement-container">
+                                <h1 class="intro-statement h1"><a href="Index.html">Jelo?</a></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="downArrow bounce">
+                        <img width="40" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=" />
+                    </div>
+                </section>
+
+                <!--Who Section-->
+                <section class="content-sections who-section">
+                    <div class="table">
+                        <div class="content-container table-cell">
+                            <div class="statement-container">
+                                <h1 class="intro-statement clickable-statement h1" id="who-btn">Who?</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Who Modal -->
+                    <div id="who-modal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close who-close">&times;</span>
+                            <div class="rows modal-content-container">
+                                <div class="modal-content-title">
+                                    <h2>Jelo Lacerna</h2>
+                                </div>
+                                <div class="para-container">
+                                    <p>
+                                        Jelo is a chemical engineer currently studying to be a developer.
+                                    </p>
+                                    <p>
+                                        He really likes tinkering with things. His mind is always fleeting with ideas and possibilities.
+                                    </p>
+                                    <p>
+                                        He has co-authored a research paper on using dried cauliflower leaves used as an adsorbent for 
+                                        treating wastewater with <span><a href="https://www.goldbio.com/product/3686/basic-fuchsin" target="_blank" class="black">Basic Fuchsin Dye</a></span>  during his 
+                                        <span><a href="https://www.slu.edu.ph/sas/" target="_blank" class="black">university</a></span>  days.
+                                    </p>
+                                    <p>
+                                        He is well versed in chemical engineering practices. He is also continually improving his coding skills. 
+                                        He also games on the side.
+                                    </p>
+                                    <p>
+                                        Currently, he resides in Surrey, British Columbia.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                    // Get the modal
+                    var whoModal = document.getElementById("who-modal");
+
+                    // Get the button that opens the modal
+                    var whoBtn = document.getElementById("who-btn");
+
+                    // Get the <span> element that closes the modal
+                    var whoSpan = document.getElementsByClassName("who-close")[0];
+
+                    // When the user clicks the button, open the modal 
+                    whoBtn.onclick = function() {
+                        whoModal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    whoSpan.onclick = function() {
+                        whoModal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == whoModal) {
+                            whoModal.style.display = "none";
+                        }
+                    }
+                    </script>
+
+                </section>
+
+                <section class="content-sections">
+                    <div class="table">
+                        <div class="content-container table-cell">
+                            <div class="intro-statement-container">
+                                <h1 class="intro-statement clickable-statement h1" id="what-btn">What?</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What Modal -->
+                    <div id="what-modal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close what-close">&times;</span>
+                            <div class="rows modal-content-container">
+                                <div class="modal-content-title">
+                                    <h2>What projects has he done?</h2>
+                                </div>
+                                <div class="para-container-modal">
+                                    <ul>
+                                        <li>
+                                            <a href="Project.html#hanoigame">Tower of Hanoi Game with Autosolver</a>
+                                            <p class="description">Bog standard towers and discs game with autosolver</p>
+                                        </li>
+                                        <li>
+                                            <a href="Project.html#vehiclesim">Vehicle Life Simulator</a>
+                                            <p class="description">Simulator similar to A Game of Life</p>
+                                        </li>
+                                        <li>
+                                            <a href="Project.html#atmsim">ATM Simulator</a>
+                                            <p class="description">Automatic Teller Machine Simulator</p>
+                                        </li>
+                                        <li>
+                                            <a href="Media/Project Folder/Cauliflower as adsorbent for Basic Fuchsin.pdf" download="Research Paper">Cauliflower Leaves as an adsorbent for the removal of Basic Fuchsin for aqueous solutions</a>
+                                            <p class="description">A research paper Jelo has co-authored</p>
+                                        </li>
+                                        <li>
+                                            <a href="Project.html#thisweb">This website</a>
+                                            <p class="description">The name explains for itself</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                    // Get the modal
+                    var whatModal = document.getElementById("what-modal");
+
+                    // Get the button that opens the modal
+                    var whatBtn = document.getElementById("what-btn");
+
+                    // Get the <span> element that closes the modal
+                    var whatSpan = document.getElementsByClassName("what-close")[0];
+
+                    // When the user clicks the button, open the modal 
+                    whatBtn.onclick = function() {
+                        whatModal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                        whatSpan.onclick = function() {
+                        whatModal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == whatModal) {
+                            whatModal.style.display = "none";
+                        }
+                    }
+                    </script>
+
+                </section>
+
+                <section class="content-sections">
+                    <div class="table">
+                        <div class="content-container table-cell">
+                            <div class="intro-statement-container">
+                                <h1 class="intro-statement clickable-statement h1" id="why-btn">Why?</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Why Modal -->
+                    <div id="why-modal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close why-close">&times;</span>
+                            <div class="rows modal-content-container">
+                                <div class="modal-content-title">
+                                    <h2>Why is he doing this?</h2>
+                                </div>
+                                <div class="para-container">
+                                    <p>
+                                        Jelo is a thinker and a tinkerer who loves to experience things with his hand.
+                                    </p>
+                                    <p>
+                                        He wants to know how things work. This curiosity is what drives him to do what he does.
+                                    </p>
+                                    <p>
+                                        He wants his minded stimulated all the time. Coding basically stirs up his thinking so much that he thinks it's quite relaxing.
+                                    </p>
+                                    <p>
+                                        Of course, anyone would want to do what they love to do. Jelo is no exception. This is what he loves to do.
+                                        Also, he loves gaming.
+                                    </p>
+                                    <p>
+                                        Also, money. (duh)
+                                    </p>
+                                    <p>Check out some of his <span><a href="Project.html">projects.</a></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                    // Get the modal
+                    var whyModal = document.getElementById("why-modal");
+
+                    // Get the button that opens the modal
+                    var whyBtn = document.getElementById("why-btn");
+
+                    // Get the <span> element that closes the modal
+                    var whySpan = document.getElementsByClassName("why-close")[0];
+
+                    // When the user clicks the button, open the modal 
+                    whyBtn.onclick = function() {
+                        whyModal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                        whySpan.onclick = function() {
+                        whyModal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == whyModal) {
+                            whyModal.style.display = "none";
+                        }
+                    }
+                    </script>
+
+                </section>
+
+            </main>
+
+        </div>
+        <!--Main End-->
+
+        <div class="sideways-alert">
+            <div class="message-container">
+                <img src="Media/jelo.jpg" alt="">
+                <h2>Turn your device sideways</h2>
+                <p>You'll love it</p>
+            </div>
+        </div>
+
+        <!-- Footer start -->
+        <footer class="main-footer">
+            <div class="footer-container">
+
+                <div class="col">
+                    <p>Wanna get in touch?</p>
+                    <form action="" method="post" class="form-contact">
+                    <div class="input-field-container">
+                        <p>
+                            <input id="fieldName" name="cm-name" type="text" placeholder="Name">
+                        </p>
+                        <p>
+                            <input id="fieldEmail" name="cm-zedr-zedr" type="email" required="" placeholder="Email">
+                        </p>
+                    </div>
+                    <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="col">
+                    <p>More Juicy Deets</p>
+                    <p class="address"><a href="" target="_blank">108-14921 104 Ave <br> Surrey, BC V3R 1M8</a></p>
+                    <p class="phone"><a href="">604-###-####</a></p>
+                    <p class="email"><a href="">jlacerna24@protonmail.com</a></p>
+                    <p class="copyright">©2022 Copy Right</p>
+                </div>
+
+                <div class="col">
+                    <p>Let’s Get Social</p>
+                    <ul class="social-list list">
+                        <li><a href="https://www.facebook.com/lacernajelouie/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/jeloxidation/" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/JLacerna214" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/in/jelouie-lacerna-38851619b/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/JeloLacerna" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDP | Calculators</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/8c9da4b746.js" crossorigin="anonymous"></script>
+    <script src="Scripts/modernizr.custom.05819.js" defer></script>
+    <script src="Scripts/calculator.js" defer></script>
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Media/Favicon/favicon-16x16.png" sizes="16x16">
+</head>
+<body>
+    <main class="main">
+        <aside class="sidebar shaded-bg">
+            <div class="logo-container">
+                <a href="">
+                    <img src="Media/White-logo.png" alt="">
+                </a>
+            </div>
+            <hr>
+            <div class="menu-container">
+                <ul class="navigation">
+                    <div class="title-card">
+                        Genshin Impact Database Project
+                    </div>
+                    <li>
+                        <a href="index.html"><img src="Media/Home.png" alt=""><span>Home</span></a>
+                    </li>
+                    <li>
+                        <a href="characters.html"><img src="Media/Character.png" alt=""><span>Characters</span></a>
+                    </li>
+                    <li>
+                        <a href="events.html"><img src="Media/Event.png" alt=""><span>Events</span></a>
+                    </li>
+                    <li>
+                        <a href="weapons.html"><img src="Media/Weapon.png" alt=""><span>Weapons</span></a>
+                    </li>
+                    <li>
+                        <a href="artifacts.html"><img src="Media/Artifact.png" alt=""><span>Artifacts</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="calculator.html"><img src="Media/Calc.png" alt=""><span>Calculator</span></a>
+                    </li>
+                    <li>
+                        <a href="items.html"><img src="Media/Items.png" alt=""><span>Items</span></a>
+                    </li>
+                    <li>
+                        <a href="links.html"><img src="Media/Links.png" alt=""><span>Links</span></a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="content">
+            <div class="page-title-container">
+                <p class="border-b">Calculators</p>
+            </div>
+            <div class="content-main content-home">
+                <div class="shaded-bg col calc-container">
+                    <h2>Character Calculator</h2>
+                    <div class="fw flex-display calc-content">
+                        <div class="col calc-input-container">
+                            <div class="col calc-sub-container">
+                                <h3>Character</h3>
+                                <div class="filter-button-container flex-display" id="type-filter">
+                                <select name="char-selector" id="char-selector" class="fw mat-types-selector white-text" onchange="charSelect()">
+                                    <option value="" selected disabled hidden>Select Character</option>
+                                    
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col calc-sub-container">
+                                <p>Current Character Level</p>
+                                <input type="number" name="current-lvl-char" id="current-lvl-char" placeholder="Input current character level..." class="char-input-level" min="1" max="89" onkeyup="setCurrentLevel()" onclick="setCurrentLevel()">
+                                <div class="col just-right">
+                                    <input type="checkbox" id="check1" class="toggle" onclick="handleCheckBox1()">
+                                    <label for="check1" >Ascended?</label>
+                                    &nbsp
+                                    <div class="tooltip">
+                                        <img src="Media/question-mark-button-svgrepo-com.svg" alt="">
+                                        <span class="tooltiptext">Toggle if character is ascended e.g. lvl 20/40</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col calc-sub-container">
+                                <p>Desired Character Level</p>
+                                <input type="number" name="desired-lvl-char" id="desired-lvl-char" placeholder="Input desired character level..." class="char-input-level" min="2" max="90" onkeyup="setDesiredLevel()" onclick="setDesiredLevel()">
+                                <div class="col just-right">
+                                    <input type="checkbox" id="check2" class="toggle" onclick="handleCheckBox2()">
+                                    <label for="check2">Ascended?</label>
+                                    &nbsp
+                                    <div class="tooltip">
+                                        <img src="Media/question-mark.png" alt="">
+                                        <span class="tooltiptext">Toggle if desired level is ascended e.g. lvl 80/90</span>
+                                    </div>
+                                </div>
+                                <div class="col ta-center">
+                                    <button class="calculate-button" id="calc-button" disabled data-state="inactive" onclick="calculate()">Calculate</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-input-container result-table-container" id="result-table-character">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <footer class="footer">
+                <hr>
+                <ul class="footer-nav">
+                    <a href="about.html">About</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+                <span>©&nbsp;2019 -&nbsp;2022&nbsp; Genshin Impact DB Project</span>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
